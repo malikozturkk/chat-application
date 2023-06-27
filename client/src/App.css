@@ -107,44 +107,37 @@ body {
 .chat-window .chat-body .message .message-content {
   width: auto;
   height: auto;
-  min-height: 40px;
-  max-width: 120px;
-  background-color: #43a047;
+  max-width: 200px;
+  background-color: cornflowerblue;
   border-radius: 5px;
   color: white;
   display: flex;
-  align-items: center;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
   overflow-wrap: break-word;
   word-break: break-word;
-}
-
-#you {
-  justify-content: flex-start;
-}
-
-#you .message-content {
-  justify-content: flex-start;
-}
-
-#you .message-meta {
-  justify-content: flex-start;
-  margin-left: 5px;
+  margin: 0;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 #other {
-  justify-content: flex-end;
-}
-
-#other .message-content {
-  justify-content: flex-end;
-  background-color: cornflowerblue;
+  justify-content: flex-start;
 }
 
 #other .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#you {
+  justify-content: flex-end;
+}
+
+#you .message-content {
+  background-color: #43a047;
+}
+
+#you .message-meta {
   justify-content: flex-end;
   margin-right: 5px;
 }
