@@ -23,7 +23,7 @@ function App() {
           <h3>Join A Chat</h3>
           <input type="text" placeholder="Name" onChange={(event) => { setUsername(event.target.value) }} />
           <input type="text" placeholder="Room ID" onChange={(event) => { setRoom(event.target.value) }} />
-          <button onClick={joinRoom}>Join A Room</button>
+          <button className={username !== "" && room !== "" ? "show" : "disabled"} onClick={joinRoom}>Join A Room</button>
         </div>
       }
       {showChat &&

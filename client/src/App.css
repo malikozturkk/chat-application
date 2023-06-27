@@ -31,7 +31,7 @@ body {
   width: 210px;
   height: 40px;
   margin: 7px;
-  border: 2px solid #43a047;
+  border: 2px solid #0683ff;
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
@@ -45,13 +45,17 @@ body {
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
-  background: #43a047;
+  background: #80b9f4;
   color: #fff;
   cursor: pointer;
 }
 
+.joinChatContainer .show {
+  background: #0683ff;
+}
+
 .joinChatContainer button:hover {
-  background: #2e7d32;
+  background: #0683ff;
 }
 
 .chat-window {
@@ -69,6 +73,8 @@ body {
   background: #263238;
   position: relative;
   cursor: pointer;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .chat-window .chat-header p {
@@ -108,9 +114,9 @@ body {
   width: auto;
   height: auto;
   max-width: 200px;
-  background-color: cornflowerblue;
+  background-color: #efefef;
   border-radius: 5px;
-  color: white;
+  color: black;
   display: flex;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -134,7 +140,8 @@ body {
 }
 
 #you .message-content {
-  background-color: #43a047;
+  background-color: #0683ff;
+  color: white;
 }
 
 #you .message-meta {
@@ -187,9 +194,54 @@ body {
 }
 
 .chat-window .chat-footer button:hover {
-  color: #43a047;
+  color: #0683ff;
 }
 
 .hide {
   opacity: 0 !important;
+}
+
+.chat-window .chat-footer .show {
+  color: #0683ff;
+}
+
+.chat-window .chat-footer .disabled {
+  color: #80b9f4;
+  cursor: no-drop;
+}
+
+@media only screen and (max-width: 600px) {
+  .chat-window {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .chat-window .chat-body {
+    height: 100%;
+    border: none;
+  }
+
+  .chat-window .chat-header {
+    border-radius: 0;
+    background: #fff;
+  }
+
+  .chat-window .chat-header p {
+    color: #0683ff;
+  }
+
+  .chat-window .chat-footer {
+    border: none;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    height: 45px;
+  }
+
+  .chat-window .chat-footer input {
+    border: 1px solid black;
+    border-radius: 8px;
+  }
 }
